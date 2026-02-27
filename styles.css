@@ -599,33 +599,38 @@ body {
     font-size: 0.72rem;
   }
 
-  /* Search bar: visible chrome on mobile */
+  /* Search bar: subtle underline on mobile, 16px to prevent iOS zoom */
   .search-container {
-    top: calc(clamp(20px, 4vh, 50px) + 1.2rem);
-    left: 50%;
-    transform: translateX(-50%);
-    width: min(260px, calc(100vw - 40px));
-    background: rgba(255, 255, 255, 0.72);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 8px;
-    padding: 0 0.6rem;
+    top: calc(clamp(20px, 4vh, 50px) + 1.1rem);
+    left: 16px;
+    right: 16px;
+    transform: none;
+    width: auto;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .search-input {
-    padding: 0.5rem 1.4rem 0.5rem 0;
+    font-size: 16px;
+    padding: 0.4rem 1.6rem 0.4rem 0;
   }
 
-  /* Filters: centered row below search */
+  .search-placeholder {
+    font-size: 16px;
+  }
+
+  .search-cursor {
+    font-size: 16px;
+  }
+
+  /* Filters: left-aligned row below search */
   .super-filters {
-    top: calc(clamp(20px, 4vh, 50px) + 3.2rem);
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
+    top: calc(clamp(20px, 4vh, 50px) + 3.4rem);
+    left: 16px;
+    right: 16px;
+    transform: none;
     width: auto;
     gap: 0.5rem;
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .cat-toggle {
@@ -635,11 +640,11 @@ body {
 
   /* Festival list: full width, below filters, scrollable on iOS */
   .festival-info {
-    top: calc(clamp(20px, 4vh, 50px) + 5.4rem);
+    top: calc(clamp(20px, 4vh, 50px) + 5.2rem);
     left: 16px;
     right: 16px;
     max-width: none;
-    max-height: calc(100vh - clamp(20px, 4vh, 50px) - 5.4rem - 80px);
+    max-height: calc(100vh - clamp(20px, 4vh, 50px) - 5.2rem - 80px);
     pointer-events: auto;
     -webkit-overflow-scrolling: touch;
   }
