@@ -9,10 +9,6 @@
   box-sizing: border-box;
 }
 
-html {
-  background: var(--bg-bot);
-}
-
 html,
 body {
   width: 100%;
@@ -24,7 +20,8 @@ body {
 body {
   overflow: hidden;
   font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
-  background:
+  background-color: var(--bg-bot);
+  background-image:
     radial-gradient(88rem 54rem at 18% -8%, rgba(255, 255, 255, 0.42), transparent 64%),
     radial-gradient(72rem 52rem at 82% 10%, rgba(226, 234, 247, 0.26), transparent 68%),
     linear-gradient(180deg, var(--bg-top) 0%, var(--bg-mid) 58%, var(--bg-bot) 100%);
