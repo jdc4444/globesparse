@@ -622,29 +622,29 @@ body {
     font-size: 16px;
   }
 
-  /* Filters: left-aligned row below search */
+  /* Filters: centered, spread across full width */
   .super-filters {
-    top: calc(clamp(20px, 4vh, 50px) + 3.4rem);
+    top: calc(clamp(20px, 4vh, 50px) + 3.8rem);
     left: 16px;
     right: 16px;
     transform: none;
     width: auto;
     gap: 0.5rem;
-    justify-content: flex-start;
+    justify-content: center;
   }
 
   .cat-toggle {
-    font-size: 0.52rem;
-    padding: 0.25rem 0.5rem;
+    font-size: 0.62rem;
+    padding: 0.32rem 0.62rem;
   }
 
   /* Festival list: full width, below filters, scrollable on iOS */
   .festival-info {
-    top: calc(clamp(20px, 4vh, 50px) + 5.2rem);
+    top: calc(clamp(20px, 4vh, 50px) + 5.8rem);
     left: 16px;
     right: 16px;
     max-width: none;
-    max-height: calc(100vh - clamp(20px, 4vh, 50px) - 5.2rem - 80px);
+    max-height: calc(100vh - clamp(20px, 4vh, 50px) - 5.8rem - 80px);
     pointer-events: auto;
     -webkit-overflow-scrolling: touch;
   }
