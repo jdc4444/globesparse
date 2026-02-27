@@ -684,7 +684,8 @@ async function boot() {
   scene.environment = createStudioEnvironmentSafe(renderer);
 
   const camera = new THREE.PerspectiveCamera(31, 1, 0.05, 80);
-  camera.position.set(0, 0.15, 6.0);
+  const isMobileView = window.matchMedia("(max-width: 640px)").matches;
+  camera.position.set(0, 0.15, isMobileView ? 7.2 : 6.0);
 
   const controls = new OrbitControls(camera, renderer.domElement);
   controls.enablePan = false;

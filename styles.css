@@ -599,12 +599,22 @@ body {
     font-size: 0.72rem;
   }
 
-  /* Search bar: centered below title */
+  /* Search bar: visible chrome on mobile */
   .search-container {
     top: calc(clamp(20px, 4vh, 50px) + 1.2rem);
     left: 50%;
     transform: translateX(-50%);
     width: min(260px, calc(100vw - 40px));
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 0 0.6rem;
+  }
+
+  .search-input {
+    padding: 0.5rem 1.4rem 0.5rem 0;
   }
 
   /* Filters: centered row below search */
@@ -623,13 +633,15 @@ body {
     padding: 0.25rem 0.5rem;
   }
 
-  /* Festival list: full width, below filters */
+  /* Festival list: full width, below filters, scrollable on iOS */
   .festival-info {
-    top: calc(clamp(20px, 4vh, 50px) + 5rem);
+    top: calc(clamp(20px, 4vh, 50px) + 5.4rem);
     left: 16px;
     right: 16px;
     max-width: none;
-    max-height: calc(100vh - clamp(20px, 4vh, 50px) - 5rem - 80px);
+    max-height: calc(100vh - clamp(20px, 4vh, 50px) - 5.4rem - 80px);
+    pointer-events: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   .fi-name {
